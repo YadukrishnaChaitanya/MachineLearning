@@ -4,13 +4,13 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>65d96aee-f399-4fb9-a6d7-9255b98e8780</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>MachineLearning.py</StartupFile>
-    <SearchPath>
-    </SearchPath>
+    <StartupFile>Simple Leniar Regression\simple_linear_regression.py</StartupFile>
+    <SearchPath>..\..\DATASET</SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>MachineLearning</Name>
     <RootNamespace>MachineLearning</RootNamespace>
+    <InterpreterId>Global|ContinuumAnalytics|Anaconda36-64</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +21,26 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="MachineLearning.py" />
+    <Compile Include="Data Preprocessing\categorical_data.py" />
+    <Compile Include="Data Preprocessing\data_preprocessing_template.py" />
+    <Compile Include="Data Preprocessing\data_preprocessing_template_Use.py" />
+    <Compile Include="Data Preprocessing\missing_data.py" />
+    <Compile Include="Multiple Leniar Regression\multiple_leniar_regression.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Simple Leniar Regression\simple_linear_regression.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|ContinuumAnalytics|Anaconda36-64" />
+    <InterpreterReference Include="Global|PythonCore|3.6" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Multiple Leniar Regression\" />
+    <Folder Include="Data Preprocessing\" />
+    <Folder Include="Simple Leniar Regression\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Multiple Leniar Regression\Multiple_Leniar_Regression.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
