@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>65d96aee-f399-4fb9-a6d7-9255b98e8780</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Simple Leniar Regression\simple_linear_regression.py</StartupFile>
+    <StartupFile>Polynomial Leniar Regression\polynomial_leniar_regression.py</StartupFile>
     <SearchPath>..\..\DATASET</SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
@@ -28,6 +28,7 @@
     <Compile Include="Multiple Leniar Regression\multiple_leniar_regression.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Polynomial Leniar Regression\polynomial_leniar_regression.py" />
     <Compile Include="Simple Leniar Regression\simple_linear_regression.py" />
   </ItemGroup>
   <ItemGroup>
@@ -37,10 +38,12 @@
   <ItemGroup>
     <Folder Include="Multiple Leniar Regression\" />
     <Folder Include="Data Preprocessing\" />
+    <Folder Include="Polynomial Leniar Regression\" />
     <Folder Include="Simple Leniar Regression\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Multiple Leniar Regression\Multiple_Leniar_Regression.txt" />
+    <Content Include="Polynomial Leniar Regression\Polynomial_Leniar_Regression.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
