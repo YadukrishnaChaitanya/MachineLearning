@@ -11,6 +11,10 @@
     <Name>MachineLearning</Name>
     <RootNamespace>MachineLearning</RootNamespace>
     <InterpreterId>Global|ContinuumAnalytics|Anaconda36-64</InterpreterId>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <DebugStdLib>False</DebugStdLib>
+    <IsWindowsApplication>False</IsWindowsApplication>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,6 +34,9 @@
     </Compile>
     <Compile Include="Polynomial Leniar Regression\polynomial_leniar_regression.py" />
     <Compile Include="Simple Leniar Regression\simple_linear_regression.py" />
+    <Compile Include="Support Vector Regression\supportvectorregression.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|ContinuumAnalytics|Anaconda36-64" />
@@ -38,12 +45,14 @@
   <ItemGroup>
     <Folder Include="Multiple Leniar Regression\" />
     <Folder Include="Data Preprocessing\" />
+    <Folder Include="Support Vector Regression\" />
     <Folder Include="Polynomial Leniar Regression\" />
     <Folder Include="Simple Leniar Regression\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Multiple Leniar Regression\Multiple_Leniar_Regression.txt" />
     <Content Include="Polynomial Leniar Regression\Polynomial_Leniar_Regression.txt" />
+    <Content Include="Support Vector Regression\SupportVectorRegression.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

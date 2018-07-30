@@ -1,62 +1,11 @@
-Mathematical Equation of Multiple Leniar regression
-	y = b0 + b1*x1 + b2*x2 + b3*X3 + categorical_var
-	if there is cat_var then we need to create dummy variables
-	y = b0 + b1*x1 + b2*x2 + b3*X3 + b4*D1 + b4*D2
-	we have replaced all category variable with Dummy variable and equ changes to above.
-		We should not include all the Dummy Vairables
+Polynomial Regression:
+  SLR : y = b0 + b1x1
+  MLR : y = b0 + b1x1 + b2x2 + b3x3+...+ bnxn
+  PLR : y = b0 + b1x1 + b2x1^2 + b3x1^3 + ...+ bnx1^n
 
-Dummy Variable Trap:
-If there are 2 categories (like yes/no or girls/boys or states)    
-    We should not include both Dumy variables
-    If we create a n dummy variables then we should include n-1 dummy variables
-    it is because of multiple leniarity 
-
-
-How to build models step step:
-    Why to eliminate some of the variables
-
-5 Methods to select a Model:
-    1. All in
-    2. Backward Elimination
-    3. Forward selection
-    4. Bi-Directional Elimination
-    5. score comparision
- 
-    All-In : 
-	+++++++++++++++++++++
-	Use all the variables based on prior knowledge or already provided
-    Backward Elimination:(step by step method)
-        1. select significance level
-        2. fit the full model with all possible predictors
-        3. Consider the predictor with highest P-value. If P>SL goto 4 else goto FIN
-        4. Remove the predictor
-        5. Fit the model without variable and we should rebuild the model again
-        after rebuilding the model we have to goto 3 and repeat
-        FIN : Model ready
-    Forward Selection:
-	+++++++++++++++++++++
-        1. Select a significance level to enter a model
-        2. Fit all the simple regression models(i.e create simple model for all the dependent variable) y~xn and then select the model with lowest P-val
-        3. We will keep th variable and fit all possible models with one extra predictor added to the we already have
-           ie contruct all possible "2 variable" LR models with the selected variable + other variable separately
-        4. Consider the predictor with lowest P-value. If P<SL go to step3 and make the model with 3 variable LR models
-
-        So basically we will create LR model with 1 variable and select the variable with lowest P-val
-        Then make 2 variable LR with "selected var" and then keep the "selected var" in step  1 and the one with lowest P-val in step2
-        same with the 3 var , 4 var
-        Continue till all the variables are exhausted growing at one variable at a time
-		keep prev model
-    Bi-Directional Model:
-	+++++++++++++++++++++
-		1.select the entry SL and stay SL 
-		2. Perform all the Forward Elimination steps
-		3. Perform all the backward Elimination steps.
-		Repeat 2 and 3 till no variable can enter or stay
-	All Possible Models:
-	+++++++++++++++++++++
-		1. select the criterion of goodness of fit
-		2. Construct all the possible regression models 2^n-1 (if there are n var) total combinations
-		3. select the one with best criterion
-
-	Conclusion:
-	+++++++++++++++++++++++++
+When to USE:
+  To describe diseases spread/epidemic's spread.
+Why Leniar:
+  We are taking about co-efficients not x(independent variables)
+  We need to find co-efficients
+  
